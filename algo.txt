@@ -1,0 +1,26 @@
+/* *************algorithme qui lit une phrase****** */
+ ALGORITHME Pro_alorithme
+ VAR
+      nbr_w,nbr_c,nbr_v : integer;
+      character : char;
+      nbr_w := nbr_c:= nbr_v :=0; 
+BEGIN
+      WRITE(" SAISIR VOTRE TEXT");
+      READ(character);
+       REPEAT
+              
+            IF((character= '.' AND nbr_c <> 0)) OR ((character= ''AND nbr_c <> 0))) THEN
+              nbr_w := nbr_w + 1;
+
+             END_IF
+            IF(character <> '' AND character <> '.')THEN
+            nbr_c := nbr_c + 1;
+            IF(character ='a'OR 'e' OR 'i' OR 'u' OR 'o')THEN
+            nbr_v := nbr_v + 1;
+
+            END_IF
+        UNTIL (character <> '.');
+        WRITE(nbr_w);
+        WRITE(nbr_c);
+        WRITE(nbr_v);
+END
